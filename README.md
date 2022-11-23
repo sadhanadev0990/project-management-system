@@ -6,7 +6,7 @@ Backend :
 
       cd backend
 
-      npm install
+      yarn install
 
       npm run start
 
@@ -14,6 +14,6 @@ Frontend :
 
       cd frontend
 
-      npm install
+      yarn install
 
       npm run launch
