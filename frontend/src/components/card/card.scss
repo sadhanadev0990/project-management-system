@@ -1,0 +1,175 @@
+.card-container {
+	.card {
+		padding-top: 10px;
+	}
+	.card-img {
+		border-radius: 12px;
+		height: 150px;
+		width: 100%;
+	}
+	.horizontal-line {
+		border-bottom: 1.5px solid #e7e7e7;
+		height: 1.5px;
+		margin: 10px 0;
+	}
+	.project-info {
+		padding-bottom: 10px;
+
+		.progress-detail {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+			margin-top: 10px;
+
+			.status-info {
+				align-items: center;
+				display: flex;
+			}
+			.stage-info {
+				align-items: center;
+				display: flex;
+			}
+		}
+		.project-date {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+
+			.team-count-info {
+				align-items: center;
+				display: flex;
+				font-family: 'Roboto-Regular', sans-serif;
+				font-size: 12px;
+				font-stretch: normal;
+				font-style: normal;
+				font-weight: normal;
+				justify-content: center;
+				letter-spacing: 0.1px;
+				line-height: 1.75;
+
+				.team-count {
+					padding-left: 7px;
+					padding-top: 3px;
+				}
+			}
+			.due-date-info {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+			}
+		}
+		.project-description {
+			font-family: 'Roboto-Regular', sans-serif;
+			font-size: 12px;
+			font-stretch: normal;
+			font-style: normal;
+			font-weight: normal;
+			letter-spacing: 0.1px;
+			line-height: 1.75;
+		}
+	}
+	.date-info,
+	.status-info,
+	.stage-info {
+		font-family: 'Roboto-Regular', sans-serif;
+		font-size: 12px;
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.1px;
+		line-height: 1.75;
+	}
+	.card-btn {
+		background-color: #79589f;
+		border-color: #79589f;
+		color: #fff;
+		font-family: 'Roboto-Medium', sans-serif;
+		font-size: 16px;
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.1px;
+		line-height: 1.75;
+		width: 100%;
+
+		&:hover,
+		&:active {
+			background-color: #79589f !important;
+			border-color: #79589f !important;
+		}
+	}
+	.card-title {
+		font-family: 'Roboto-Bold', sans-serif;
+		font-size: 16px;
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.1px;
+		line-height: 1.75;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.card-subtitle {
+		font-family: 'Roboto-Medium', sans-serif;
+		font-size: 12px;
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.1px;
+		line-height: 0.75;
+		margin-bottom: 0 !important;
+	}
+}
+.grid {
+	display: grid;
+	gap: 25px;
+	grid-template-columns: repeat(3, 1fr);
+	overflow: visible;
+
+	.grid-item {
+		-webkit-animation: fadein 0.3s linear forwards;
+		align-items: center;
+		animation: fadein 0.3s linear forwards;
+		display: flex;
+	}
+	.grid-item-fadeout {
+		-webkit-animation: fadeout 0.3s linear forwards;
+		align-items: center;
+		animation: fadeout 0.3s linear forwards;
+		display: flex;
+	}
+}
+@-webkit-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

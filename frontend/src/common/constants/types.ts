@@ -1,0 +1,9 @@
+export const GET_PROJECTS = 'GET_PROJECTS';
+export const CREATE_PROJECT = 'CREATE_PROJECT';
+export const GET_PROJECT_DETAIL = 'GET_PROJECT_DETAIL';
+export const UPDATE_PROJECT = 'UPDATE_PROJECT';
+export const DELETE_PROJECT = 'DELETE_PROJECT';
+export const USER_LOGIN = 'USER_LOGIN';
+export const USER_REGISTER = 'USER_REGISTER';
+export const USER_LOGOUT = 'USER_LOGOUT';
+export const GET_USER = 'GET_USER';

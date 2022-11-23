@@ -1,0 +1,125 @@
+.modal-container {
+	.modal-title {
+		font-family: 'Roboto-Bold', sans-serif;
+		font-size: 22px;
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.1px;
+		line-height: 1.75;
+	}
+
+	.create-btn {
+		background-color: #79589f;
+		border-color: #79589f;
+		color: #fff;
+		font-family: 'Roboto-Regular', sans-serif;
+		font-size: 16px;
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.1px;
+		line-height: 1.75;
+
+		&:hover,
+		&:active {
+			background-color: #79589f;
+			border-color: #79589f;
+		}
+	}
+
+	.form-label {
+		color: #111;
+		font-family: 'Roboto-Medium', sans-serif;
+		font-size: 16px;
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.1px;
+		line-height: 1.75;
+	}
+}
+
+.project-detail-container {
+	height: 100%;
+
+	.project-view-container {
+		height: 100%;
+
+		.card {
+			height: 100%;
+
+			.card-title {
+				display: flex;
+				font-family: 'Roboto-Medium', sans-serif;
+				font-size: 18px;
+				font-stretch: normal;
+				font-style: normal;
+				font-weight: normal;
+				justify-content: space-between;
+				letter-spacing: 0.1px;
+				line-height: 1.75;
+				width: 80%;
+			}
+
+			.form-label {
+				font-family: 'Roboto-Medium', sans-serif;
+				font-size: 14px;
+				font-stretch: normal;
+				font-style: normal;
+				font-weight: normal;
+				letter-spacing: 0.1px;
+				line-height: 1.75;
+			}
+
+			.form-lebel-value {
+				font-family: 'Roboto-Regular', sans-serif;
+				font-size: 14px;
+				font-stretch: normal;
+				font-style: normal;
+				font-weight: normal;
+				letter-spacing: 0.1px;
+				line-height: 1.75;
+			}
+
+			.edit-btn {
+				background-color: #79589f;
+				border-color: #79589f;
+				color: #fff;
+				font-family: 'Roboto-Regular', sans-serif;
+				font-size: 12px;
+				font-stretch: normal;
+				font-style: normal;
+				font-weight: normal;
+				letter-spacing: 0.1px;
+				line-height: 1.15;
+
+				&:hover,
+				&:active {
+					background-color: #79589f;
+					border-color: #79589f;
+				}
+			}
+
+			.update-btn {
+				background-color: #79589f;
+				border-color: #79589f;
+				color: #fff;
+				float: right;
+				font-family: 'Roboto-Regular', sans-serif;
+				font-size: 16px;
+				font-stretch: normal;
+				font-style: normal;
+				font-weight: normal;
+				letter-spacing: 0.1px;
+				line-height: 1.75;
+
+				&:hover,
+				&:active {
+					background-color: #79589f;
+					border-color: #79589f;
+				}
+			}
+		}
+	}
+}
