@@ -1,0 +1,84 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest/globals": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:jest/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/jsx-runtime",
+		"airbnb",
+		"plugin:prettier/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["react", "jest", "react-hooks", "@typescript-eslint", "prettier"],
+	"rules": {
+		"@typescript-eslint/indent": ["error", "tab"],
+		"@typescript-eslint/no-unused-vars": "error",
+		"@typescript-eslint/no-explicit-any": "error",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{ "devDependencies": ["**/*.spec.ts", "**/*.spec.tsx"] }
+		],
+		"import/no-unresolved": "error",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"import/prefer-default-export": "off",
+		"no-empty-function": "off",
+		"@typescript-eslint/no-empty-function": ["error"],
+		"linebreak-style": 0,
+		"lines-between-class-members": [
+			"error",
+			"always",
+			{ "exceptAfterSingleLine": true }
+		],
+		"react/function-component-definition": [
+			2,
+			{
+				"namedComponents": [
+					"function-declaration",
+					"function-expression",
+					"arrow-function"
+				]
+			}
+		],
+		"react/jsx-filename-extension": [
+			"warn",
+			{
+				"extensions": [".tsx"]
+			}
+		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
+		"no-shadow": "off",
+		"@typescript-eslint/no-shadow": ["error"]
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	},
+	"ignorePatterns": ["node_modules", "build", "dist", "public"]
+}
