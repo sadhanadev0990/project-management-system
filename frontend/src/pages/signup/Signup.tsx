@@ -109,16 +109,6 @@ export const Signup: React.FC = () => {
 									onChange={(e) => onChangeInput(e, 'password')}
 								/>
 							</Form.Group>
-							{/* <Form.Group className="mb-3" controlId="formBasicPassword">
-								<Form.Label>Password confirm</Form.Label>
-								<Form.Control
-									type="password"
-									placeholder="Password confirm"
-									className="form-input"
-									value={formData.passwordConfirm}
-									onChange={(e) => onChangeInput(e, 'passwordConfirm')}
-								/>
-							</Form.Group> */}
 
 							<div className="btn-panel">
 								<Button

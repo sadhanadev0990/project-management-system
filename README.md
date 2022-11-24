@@ -1,6 +1,6 @@
 # Project-Management-System Application
 
-Built using modern technologies: node.js, express, mongoDB, mongoose and React.
+Built using modern technologies: mongoDB, express, node.js, React, Redux, Redux toolkit and typescript.
 
 Backend :
 

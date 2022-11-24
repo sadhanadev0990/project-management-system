@@ -14,7 +14,6 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier:fix": "npx prettier --write --cache src",
     "format": "npm run prettier:fix && npm run lint:fix",
-    "server": "node scripts/devServer.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:snapshot": "jest -u",
