@@ -153,9 +153,11 @@ export const ProjectCreate: React.FC<ModalProps> = ({ show, onHide }) => {
 										as="textarea"
 										rows={2}
 										name="description"
+										minLength={120}
 										value={formData.description}
 										onChange={(e) => onChangeInput(e, 'description')}
 									/>
+									<Form.Text>Minimum of 120 characters</Form.Text>
 								</Form.Group>
 							</Col>
 						</Row>
@@ -238,7 +240,22 @@ export const ProjectCreate: React.FC<ModalProps> = ({ show, onHide }) => {
 					</Form>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button className="create-btn" onClick={() => onSubmitForm()}>
+					<Button
+						className="create-btn"
+						onClick={() => onSubmitForm()}
+						disabled={
+							formData.name &&
+							formData.description &&
+							formData.description.length > 120 &&
+							formData.stage &&
+							formData.status &&
+							formData.teamCount &&
+							formData.title &&
+							formData.dueDate
+								? false
+								: true
+						}
+					>
 						Create project
 					</Button>
 				</Modal.Footer>

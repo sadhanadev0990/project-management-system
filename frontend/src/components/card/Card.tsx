@@ -52,6 +52,7 @@ export function ProjectCard({
 									(userRole.toLowerCase() === 'admin' ||
 										userRole.toLowerCase() === 'manager') && (
 										<TrashFill
+											className="cursor-pointer"
 											color="#ab1725"
 											size={15}
 											onClick={() => {
@@ -87,7 +88,13 @@ export function ProjectCard({
 									<span className="stage-info">{project.stage}</span>
 								</div>
 								<div className="horizontal-line" />
-								<Card.Text className="project-description">
+								<Card.Text
+									className={`${
+										project.description.length * 1 > 120
+											? 'truncate-ellipsis'
+											: ''
+									} project-description`}
+								>
 									{project.description}
 								</Card.Text>
 								<div className="horizontal-line" />

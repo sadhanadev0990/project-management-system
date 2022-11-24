@@ -176,13 +176,17 @@ export const ProjectEdit: React.FC<ProjectEditProps> = ({ project }) => {
 								>
 									<Form.Label className="form-label">Description</Form.Label>
 									{showEditForm ? (
-										<Form.Control
-											as="textarea"
-											rows={2}
-											name="description"
-											value={formData.description}
-											onChange={(e) => onChangeInput(e, 'description')}
-										/>
+										<>
+											<Form.Control
+												as="textarea"
+												rows={2}
+												name="description"
+												minLength={120}
+												value={formData.description}
+												onChange={(e) => onChangeInput(e, 'description')}
+											/>
+											<Form.Text>Minimum of 120 characters</Form.Text>
+										</>
 									) : (
 										<Form.Text muted>
 											<div className="form-lebel-value">
@@ -296,7 +300,22 @@ export const ProjectEdit: React.FC<ProjectEditProps> = ({ project }) => {
 						{showEditForm && (
 							<Row>
 								<Col>
-									<Button className="update-btn" onClick={() => onSubmitForm()}>
+									<Button
+										className="update-btn"
+										onClick={() => onSubmitForm()}
+										disabled={
+											formData.name &&
+											formData.description &&
+											formData.description.length > 120 &&
+											formData.stage &&
+											formData.status &&
+											formData.teamCount &&
+											formData.title &&
+											formData.dueDate
+												? false
+												: true
+										}
+									>
 										Update project
 									</Button>
 								</Col>

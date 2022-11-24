@@ -38,6 +38,11 @@
 		letter-spacing: 0.1px;
 		line-height: 1.75;
 	}
+
+	.btn:disabled {
+		background-color: grey;
+		border-color: gray;
+	}
 }
 
 .project-detail-container {

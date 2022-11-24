@@ -22,13 +22,13 @@ const projectSchema = new mongoose.Schema({
     type: String,
     require: [true, 'A project must have a status'],
   },
-  startDate: {
-    type: Date,
-    require: [true, 'A project must have a start date'],
+  teamCount: {
+    type: Number,
+    require: [true, 'A project must have a team count'],
   },
-  endDate: {
+  dueDate: {
     type: Date,
-    require: [true, 'A project must have a end date'],
+    require: [true, 'A project must have a due date'],
   },
   createdAt: {
     type: Date,
