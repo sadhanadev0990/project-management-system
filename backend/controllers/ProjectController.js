@@ -13,31 +13,36 @@ exports.checkBody = (req, res, next) => {
 };
 
 exports.createProject = catchAsync(async (req, res, next) => {
-  const newProject = await Project.create(req.body);
-  res.status(201).json({
-    status: 'success',
-    data: {
-      project: newProject,
-    },
-  });
+    const newProject = await Project.create(req.body);
+    res.status(201).json({
+      status: 'success',
+      data: {
+        project: newProject,
+      },
+    });
 });
 
 exports.getAllProjects = catchAsync(async (req, res, next) => {
-  const features = new APIFeatures(Project.find(), req.query)
-    .filter()
-    .sort()
-    .limitFields()
-    .paginate();
+  const resultPerPage = req.query.limit;
+  const projectsCount = await Project.countDocuments();
 
-  const projects = await features.query;
+  const apiFeature = new APIFeatures(Project.find(), req.query)
+  .filter()
+  .sort()
+  .pagination(resultPerPage);
+  // .limitFields();
+
+  const projects = await apiFeature.query;
 
   res.status(200).json({
     status: 'success',
     results: projects.length,
     data: {
       projects,
+      projectsCount,
+      resultPerPage
     },
-  });
+  });  
 });
 
 exports.getProject = catchAsync(async (req, res) => {

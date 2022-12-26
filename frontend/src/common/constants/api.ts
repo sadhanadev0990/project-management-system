@@ -1,7 +1,7 @@
 export const SAVE_PROJECT_URL = '/api/v1/projects/';
 
-export const GET_PROJECTS_URL = (project: { page: number }) =>
-	`/api/v1/projects`;
+export const GET_PROJECTS_URL = (project: { page: number; limit: number }) =>
+	`/api/v1/projects?page=${project.page}&limit=${project.limit}`;
 
 export const GET_PROJECT_INFO_URL = (projectId: string) =>
 	`/api/v1/projects/${projectId}`;

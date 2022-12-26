@@ -21,7 +21,10 @@ export interface CRProject {
 
 export interface ProjectRes {
 	projects: [];
+	projectsCount: number;
+	resultPerPage: number;
 }
 export interface InfoProject {
 	page: number;
+	limit: number;
 }

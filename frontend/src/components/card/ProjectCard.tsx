@@ -52,7 +52,8 @@ export function ProjectCard({
 									(userRole.toLowerCase() === 'admin' ||
 										userRole.toLowerCase() === 'manager') && (
 										<TrashFill
-											className="cursor-pointer"
+											className="cursor-pointer delete-icon"
+											data-testid="delete-icon"
 											color="#ab1725"
 											size={15}
 											onClick={() => {

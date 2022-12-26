@@ -30,6 +30,7 @@ export const DeleteModal: React.FC<ModalProps> = ({
 					<Modal.Title
 						id="contained-modal-title-vcenter"
 						className="modal-title"
+						data-testid="modal-title"
 					>
 						Delete project
 					</Modal.Title>
@@ -42,6 +43,7 @@ export const DeleteModal: React.FC<ModalProps> = ({
 						size="lg"
 						variant="outline-secondary"
 						className="cancel-btn"
+						data-testid="cancel-btn"
 						onClick={() => onHide()}
 					>
 						Cancel
@@ -49,6 +51,7 @@ export const DeleteModal: React.FC<ModalProps> = ({
 					<Button
 						size="lg"
 						className="delete-btn"
+						data-testid="delete-btn"
 						onClick={() => onSubmitForm(projectId)}
 					>
 						Delete

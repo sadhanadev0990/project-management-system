@@ -37,16 +37,32 @@ class APIFeatures {
   }
 
   paginate() {
-    const page = this.queryString.page * 1 || 1;
-    const limit = this.queryString.limit * 1 || 100;
-    const skip = (page - 1) * limit;
+    // const page = this.queryString.page * 1 || 1;
+    // const limit = this.queryString.limit * 1 || 6;
+    // const skip = (page - 1) * limit;
 
-    this.query = this.query.skip(skip).limit(limit);
+    // this.query = this.query.skip(skip).limit(limit);
+    const resultPerPage = 6;
+    const currentPage = Number(this.queryString.page) || 1;
+
+    const skip = resultPerPage * (currentPage - 1);
+
+    this.query = this.query.limit(resultPerPage).skip(skip);
 
     // if (this.queryString.page) {
     //   const numTours = await Tour.countDocuments();
     //   if (skip > numTours) throw new Error('This page does not exist');
     // }
+    return this;
+  }
+
+  pagination(resultPerPage) {
+    const currentPage = Number(this.queryString.page) || 1;
+
+    const skip = resultPerPage * (currentPage - 1);
+
+    this.query = this.query.limit(resultPerPage).skip(skip);
+
     return this;
   }
 }

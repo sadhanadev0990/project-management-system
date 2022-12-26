@@ -47,7 +47,8 @@ export const ProjectCreate: React.FC<ModalProps> = ({ show, onHide }) => {
 		dispatch(
 			getProjects({
 				project: {
-					page
+					page,
+					limit: 6
 				}
 			})
 		);

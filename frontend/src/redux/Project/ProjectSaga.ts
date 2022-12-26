@@ -37,7 +37,7 @@ export function* createProject(
 			ProjectService.createProject,
 			action.payload.project
 		);
-		yield put(addProject(response.status));
+		yield put(addProject(response));
 	} catch (error) {
 		yield put(setAPIError({ error }));
 	}
@@ -69,7 +69,7 @@ export function* updateProject(
 			ProjectService.updateProject,
 			action.payload.project
 		);
-		yield put(setUpdateProjectStatus(response.status));
+		yield put(setUpdateProjectStatus(response));
 	} catch (error) {
 		yield put(setAPIError({ error }));
 	}
@@ -85,7 +85,7 @@ export function* deleteProject(
 			ProjectService.deleteProject,
 			action.payload.id
 		);
-		yield put(setDeleteProjectStatus(response.status));
+		yield put(setDeleteProjectStatus(response));
 	} catch (error) {
 		yield put(setAPIError({ error }));
 	}

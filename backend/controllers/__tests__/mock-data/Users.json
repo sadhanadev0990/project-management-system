@@ -1,0 +1,9 @@
+[
+    {
+        "__v": 0,
+        "_id": "637d998f70165c656a7788b6",
+        "email": "testuser@gmail.com",
+        "name": "testuser",
+        "password": "$2b$12$y7zDth2jxPLYB/q.xJ9xwujyyahloiMhdSyRZOQ3T1nJ2ZQ.Emp8K",
+        "role": "lead"
+    }]

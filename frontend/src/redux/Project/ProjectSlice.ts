@@ -14,7 +14,9 @@ export interface ProjectState {
 const initialState: ProjectState = {
 	isLoading: false,
 	projectList: {
-		projects: []
+		projects: [],
+		projectsCount: 0,
+		resultPerPage: 0
 	},
 	projectInfo: {
 		_id: '',
@@ -40,7 +42,7 @@ const projectSlice = createSlice({
 			state.projectList = action.payload.data;
 		},
 		addProject: (state, action) => {
-			state.addProjectStatus = action.payload;
+			state.addProjectStatus = action.payload.status;
 		},
 		setProjectDetail: (state, action) => {
 			state.projectInfo = action.payload.data
@@ -48,10 +50,10 @@ const projectSlice = createSlice({
 				: action.payload;
 		},
 		setUpdateProjectStatus: (state, action) => {
-			state.updateProjectStatus = action.payload;
+			state.updateProjectStatus = action.payload.status;
 		},
 		setDeleteProjectStatus: (state, action) => {
-			state.deleteProjectStatus = action.payload;
+			state.deleteProjectStatus = action.payload.status;
 		},
 		setLoadStatus: (state, action) => {
 			state.isLoading = action.payload;
